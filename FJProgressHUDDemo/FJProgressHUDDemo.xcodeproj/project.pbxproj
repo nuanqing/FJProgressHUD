@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA5E93BC202947FD0085150F /* FJProgressHUDInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5E93BB202947FD0085150F /* FJProgressHUDInfo.m */; };
+		FA654C39202A944600B34DD5 /* lkbubble8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C31202A944600B34DD5 /* lkbubble8.jpg */; };
+		FA654C3A202A944600B34DD5 /* lkbubble5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C32202A944600B34DD5 /* lkbubble5.jpg */; };
+		FA654C3B202A944600B34DD5 /* lkbubble1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C33202A944600B34DD5 /* lkbubble1.jpg */; };
+		FA654C3C202A944600B34DD5 /* lkbubble4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C34202A944600B34DD5 /* lkbubble4.jpg */; };
+		FA654C3D202A944600B34DD5 /* lkbubble2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C35202A944600B34DD5 /* lkbubble2.jpg */; };
+		FA654C3E202A944600B34DD5 /* lkbubble6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C36202A944600B34DD5 /* lkbubble6.jpg */; };
+		FA654C3F202A944600B34DD5 /* lkbubble3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C37202A944600B34DD5 /* lkbubble3.jpg */; };
+		FA654C40202A944600B34DD5 /* lkbubble7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA654C38202A944600B34DD5 /* lkbubble7.jpg */; };
+		FAAA7D00202822A900942854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7CFF202822A900942854 /* AppDelegate.m */; };
+		FAAA7D03202822A900942854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D02202822A900942854 /* ViewController.m */; };
+		FAAA7D06202822A900942854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D04202822A900942854 /* Main.storyboard */; };
+		FAAA7D08202822A900942854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D07202822A900942854 /* Assets.xcassets */; };
+		FAAA7D0B202822A900942854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D09202822A900942854 /* LaunchScreen.storyboard */; };
+		FAAA7D0E202822A900942854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D0D202822A900942854 /* main.m */; };
+		FAAA7D18202822A900942854 /* FJProgressHUDDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D17202822A900942854 /* FJProgressHUDDemoTests.m */; };
+		FAAA7D23202822A900942854 /* FJProgressHUDDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D22202822A900942854 /* FJProgressHUDDemoUITests.m */; };
+		FAAA7D332028288500942854 /* FJProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D322028288500942854 /* FJProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAAA7D14202822A900942854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAA7CF3202822A900942854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAA7CFA202822A900942854;
+			remoteInfo = FJProgressHUDDemo;
+		};
+		FAAA7D1F202822A900942854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAA7CF3202822A900942854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAA7CFA202822A900942854;
+			remoteInfo = FJProgressHUDDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA5E93BA202947FD0085150F /* FJProgressHUDInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJProgressHUDInfo.h; sourceTree = "<group>"; };
+		FA5E93BB202947FD0085150F /* FJProgressHUDInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJProgressHUDInfo.m; sourceTree = "<group>"; };
+		FA654C31202A944600B34DD5 /* lkbubble8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble8.jpg; sourceTree = "<group>"; };
+		FA654C32202A944600B34DD5 /* lkbubble5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble5.jpg; sourceTree = "<group>"; };
+		FA654C33202A944600B34DD5 /* lkbubble1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble1.jpg; sourceTree = "<group>"; };
+		FA654C34202A944600B34DD5 /* lkbubble4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble4.jpg; sourceTree = "<group>"; };
+		FA654C35202A944600B34DD5 /* lkbubble2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble2.jpg; sourceTree = "<group>"; };
+		FA654C36202A944600B34DD5 /* lkbubble6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble6.jpg; sourceTree = "<group>"; };
+		FA654C37202A944600B34DD5 /* lkbubble3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble3.jpg; sourceTree = "<group>"; };
+		FA654C38202A944600B34DD5 /* lkbubble7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lkbubble7.jpg; sourceTree = "<group>"; };
+		FAAA7CFB202822A900942854 /* FJProgressHUDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJProgressHUDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAA7CFE202822A900942854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAAA7CFF202822A900942854 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAAA7D01202822A900942854 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAAA7D02202822A900942854 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAAA7D05202822A900942854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAAA7D07202822A900942854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAAA7D0A202822A900942854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAAA7D0C202822A900942854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAA7D0D202822A900942854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAAA7D13202822A900942854 /* FJProgressHUDDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FJProgressHUDDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAA7D17202822A900942854 /* FJProgressHUDDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJProgressHUDDemoTests.m; sourceTree = "<group>"; };
+		FAAA7D19202822A900942854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAA7D1E202822A900942854 /* FJProgressHUDDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FJProgressHUDDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAA7D22202822A900942854 /* FJProgressHUDDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJProgressHUDDemoUITests.m; sourceTree = "<group>"; };
+		FAAA7D24202822A900942854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAA7D312028288500942854 /* FJProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJProgressHUD.h; sourceTree = "<group>"; };
+		FAAA7D322028288500942854 /* FJProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJProgressHUD.m; sourceTree = "<group>"; };
+		FAAA7D3420284ACA00942854 /* FJProgressHUDConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJProgressHUDConfig.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAAA7CF8202822A900942854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAA7D10202822A900942854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAA7D1B202822A900942854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA654C30202A943400B34DD5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FA654C33202A944600B34DD5 /* lkbubble1.jpg */,
+				FA654C35202A944600B34DD5 /* lkbubble2.jpg */,
+				FA654C37202A944600B34DD5 /* lkbubble3.jpg */,
+				FA654C34202A944600B34DD5 /* lkbubble4.jpg */,
+				FA654C32202A944600B34DD5 /* lkbubble5.jpg */,
+				FA654C36202A944600B34DD5 /* lkbubble6.jpg */,
+				FA654C38202A944600B34DD5 /* lkbubble7.jpg */,
+				FA654C31202A944600B34DD5 /* lkbubble8.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FAAA7CF2202822A900942854 = {
+			isa = PBXGroup;
+			children = (
+				FAAA7CFD202822A900942854 /* FJProgressHUDDemo */,
+				FAAA7D16202822A900942854 /* FJProgressHUDDemoTests */,
+				FAAA7D21202822A900942854 /* FJProgressHUDDemoUITests */,
+				FAAA7CFC202822A900942854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAAA7CFC202822A900942854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA7CFB202822A900942854 /* FJProgressHUDDemo.app */,
+				FAAA7D13202822A900942854 /* FJProgressHUDDemoTests.xctest */,
+				FAAA7D1E202822A900942854 /* FJProgressHUDDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAAA7CFD202822A900942854 /* FJProgressHUDDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FA654C30202A943400B34DD5 /* Resource */,
+				FAAA7D302028285300942854 /* FJProgressHUD */,
+				FAAA7CFE202822A900942854 /* AppDelegate.h */,
+				FAAA7CFF202822A900942854 /* AppDelegate.m */,
+				FAAA7D01202822A900942854 /* ViewController.h */,
+				FAAA7D02202822A900942854 /* ViewController.m */,
+				FAAA7D04202822A900942854 /* Main.storyboard */,
+				FAAA7D07202822A900942854 /* Assets.xcassets */,
+				FAAA7D09202822A900942854 /* LaunchScreen.storyboard */,
+				FAAA7D0C202822A900942854 /* Info.plist */,
+				FAAA7D0D202822A900942854 /* main.m */,
+			);
+			path = FJProgressHUDDemo;
+			sourceTree = "<group>";
+		};
+		FAAA7D16202822A900942854 /* FJProgressHUDDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA7D17202822A900942854 /* FJProgressHUDDemoTests.m */,
+				FAAA7D19202822A900942854 /* Info.plist */,
+			);
+			path = FJProgressHUDDemoTests;
+			sourceTree = "<group>";
+		};
+		FAAA7D21202822A900942854 /* FJProgressHUDDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA7D22202822A900942854 /* FJProgressHUDDemoUITests.m */,
+				FAAA7D24202822A900942854 /* Info.plist */,
+			);
+			path = FJProgressHUDDemoUITests;
+			sourceTree = "<group>";
+		};
+		FAAA7D302028285300942854 /* FJProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA7D3420284ACA00942854 /* FJProgressHUDConfig.h */,
+				FA5E93BA202947FD0085150F /* FJProgressHUDInfo.h */,
+				FA5E93BB202947FD0085150F /* FJProgressHUDInfo.m */,
+				FAAA7D312028288500942854 /* FJProgressHUD.h */,
+				FAAA7D322028288500942854 /* FJProgressHUD.m */,
+			);
+			path = FJProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAAA7CFA202822A900942854 /* FJProgressHUDDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAA7D27202822A900942854 /* Build configuration list for PBXNativeTarget "FJProgressHUDDemo" */;
+			buildPhases = (
+				FAAA7CF7202822A900942854 /* Sources */,
+				FAAA7CF8202822A900942854 /* Frameworks */,
+				FAAA7CF9202822A900942854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FJProgressHUDDemo;
+			productName = FJProgressHUDDemo;
+			productReference = FAAA7CFB202822A900942854 /* FJProgressHUDDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAAA7D12202822A900942854 /* FJProgressHUDDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAA7D2A202822A900942854 /* Build configuration list for PBXNativeTarget "FJProgressHUDDemoTests" */;
+			buildPhases = (
+				FAAA7D0F202822A900942854 /* Sources */,
+				FAAA7D10202822A900942854 /* Frameworks */,
+				FAAA7D11202822A900942854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAA7D15202822A900942854 /* PBXTargetDependency */,
+			);
+			name = FJProgressHUDDemoTests;
+			productName = FJProgressHUDDemoTests;
+			productReference = FAAA7D13202822A900942854 /* FJProgressHUDDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAAA7D1D202822A900942854 /* FJProgressHUDDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAA7D2D202822A900942854 /* Build configuration list for PBXNativeTarget "FJProgressHUDDemoUITests" */;
+			buildPhases = (
+				FAAA7D1A202822A900942854 /* Sources */,
+				FAAA7D1B202822A900942854 /* Frameworks */,
+				FAAA7D1C202822A900942854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAA7D20202822A900942854 /* PBXTargetDependency */,
+			);
+			name = FJProgressHUDDemoUITests;
+			productName = FJProgressHUDDemoUITests;
+			productReference = FAAA7D1E202822A900942854 /* FJProgressHUDDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAAA7CF3202822A900942854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = nuanqing;
+				TargetAttributes = {
+					FAAA7CFA202822A900942854 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FAAA7D12202822A900942854 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAAA7CFA202822A900942854;
+					};
+					FAAA7D1D202822A900942854 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAAA7CFA202822A900942854;
+					};
+				};
+			};
+			buildConfigurationList = FAAA7CF6202822A900942854 /* Build configuration list for PBXProject "FJProgressHUDDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAAA7CF2202822A900942854;
+			productRefGroup = FAAA7CFC202822A900942854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAAA7CFA202822A900942854 /* FJProgressHUDDemo */,
+				FAAA7D12202822A900942854 /* FJProgressHUDDemoTests */,
+				FAAA7D1D202822A900942854 /* FJProgressHUDDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAAA7CF9202822A900942854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA654C3F202A944600B34DD5 /* lkbubble3.jpg in Resources */,
+				FAAA7D0B202822A900942854 /* LaunchScreen.storyboard in Resources */,
+				FA654C3D202A944600B34DD5 /* lkbubble2.jpg in Resources */,
+				FA654C3A202A944600B34DD5 /* lkbubble5.jpg in Resources */,
+				FA654C3B202A944600B34DD5 /* lkbubble1.jpg in Resources */,
+				FAAA7D08202822A900942854 /* Assets.xcassets in Resources */,
+				FA654C40202A944600B34DD5 /* lkbubble7.jpg in Resources */,
+				FA654C3C202A944600B34DD5 /* lkbubble4.jpg in Resources */,
+				FAAA7D06202822A900942854 /* Main.storyboard in Resources */,
+				FA654C39202A944600B34DD5 /* lkbubble8.jpg in Resources */,
+				FA654C3E202A944600B34DD5 /* lkbubble6.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAA7D11202822A900942854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAA7D1C202822A900942854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAAA7CF7202822A900942854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAA7D332028288500942854 /* FJProgressHUD.m in Sources */,
+				FA5E93BC202947FD0085150F /* FJProgressHUDInfo.m in Sources */,
+				FAAA7D03202822A900942854 /* ViewController.m in Sources */,
+				FAAA7D0E202822A900942854 /* main.m in Sources */,
+				FAAA7D00202822A900942854 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAA7D0F202822A900942854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAA7D18202822A900942854 /* FJProgressHUDDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAA7D1A202822A900942854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAA7D23202822A900942854 /* FJProgressHUDDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAAA7D15202822A900942854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAA7CFA202822A900942854 /* FJProgressHUDDemo */;
+			targetProxy = FAAA7D14202822A900942854 /* PBXContainerItemProxy */;
+		};
+		FAAA7D20202822A900942854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAA7CFA202822A900942854 /* FJProgressHUDDemo */;
+			targetProxy = FAAA7D1F202822A900942854 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAAA7D04202822A900942854 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAA7D05202822A900942854 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAAA7D09202822A900942854 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAA7D0A202822A900942854 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAAA7D25202822A900942854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAAA7D26202822A900942854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAAA7D28202822A900942854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMC28H56EE;
+				INFOPLIST_FILE = FJProgressHUDDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuanqing.FJProgressHUDDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAAA7D29202822A900942854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMC28H56EE;
+				INFOPLIST_FILE = FJProgressHUDDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuanqing.FJProgressHUDDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAAA7D2B202822A900942854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMC28H56EE;
+				INFOPLIST_FILE = FJProgressHUDDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuanqing.FJProgressHUDDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FJProgressHUDDemo.app/FJProgressHUDDemo";
+			};
+			name = Debug;
+		};
+		FAAA7D2C202822A900942854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMC28H56EE;
+				INFOPLIST_FILE = FJProgressHUDDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuanqing.FJProgressHUDDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FJProgressHUDDemo.app/FJProgressHUDDemo";
+			};
+			name = Release;
+		};
+		FAAA7D2E202822A900942854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMC28H56EE;
+				INFOPLIST_FILE = FJProgressHUDDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuanqing.FJProgressHUDDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FJProgressHUDDemo;
+			};
+			name = Debug;
+		};
+		FAAA7D2F202822A900942854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMC28H56EE;
+				INFOPLIST_FILE = FJProgressHUDDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuanqing.FJProgressHUDDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FJProgressHUDDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAAA7CF6202822A900942854 /* Build configuration list for PBXProject "FJProgressHUDDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAA7D25202822A900942854 /* Debug */,
+				FAAA7D26202822A900942854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAA7D27202822A900942854 /* Build configuration list for PBXNativeTarget "FJProgressHUDDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAA7D28202822A900942854 /* Debug */,
+				FAAA7D29202822A900942854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAA7D2A202822A900942854 /* Build configuration list for PBXNativeTarget "FJProgressHUDDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAA7D2B202822A900942854 /* Debug */,
+				FAAA7D2C202822A900942854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAA7D2D202822A900942854 /* Build configuration list for PBXNativeTarget "FJProgressHUDDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAA7D2E202822A900942854 /* Debug */,
+				FAAA7D2F202822A900942854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAAA7CF3202822A900942854 /* Project object */;
+}

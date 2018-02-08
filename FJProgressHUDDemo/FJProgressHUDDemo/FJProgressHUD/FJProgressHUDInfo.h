@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger, FJProgressHUDInfoModeType) {
 
 - (void)layoutOnlyHUD;
 
+- (void)layoutOnlyCustom;
+
 - (void)layoutCustomWithText:(NSString *)text;
 
 - (void)layoutOnlyTextWithText:(NSString *)text;
@@ -47,3 +49,4 @@ typedef NS_ENUM(NSUInteger, FJProgressHUDInfoModeType) {
 - (void)drawProgressCircle:(CALayer *)HUDLayer progress:(CGFloat)progress;
 
 @end
+

@@ -27,6 +27,12 @@
     [self layoutHUDOrCustomWithText:NULL];
 }
 
+- (void)layoutOnlyCustom{
+    self.infoModeType = FJProgressHUDInfoCustom;
+    [self layoutHUDOrCustomWithText:NULL];
+}
+
+
 - (void)layoutHUDWithText:(NSString *)text{
     self.infoModeType = FJProgressHUDInfoHUD;
     [self layoutHUDOrCustomWithText:text];
@@ -72,18 +78,18 @@
 }
 
 - (void)layoutOnlyTextWithText:(NSString *)text{
-
+    
     CGSize textSize = [self measureTextSize:text WithFont:FJGlobalTextFont constrainedToSize:CGSizeMake(FJContentMaxWidth, MAXFLOAT)];
     
     CGFloat contentW = textSize.width > FJContentNormalWidth ? textSize.width : FJContentNormalWidth;
-    CGFloat contentH = textSize.height+FJHUDWH+FJVerticalSpace*2;
+    CGFloat contentH = textSize.height+FJVerticalSpace*4;
     CGFloat contentX = (FJMainScreenWidth - contentW)/2;
     CGFloat contentY = (FJMainScreenHeight - contentH)/2;
     self.contentViewFrame = CGRectMake(contentX, contentY, contentW, contentH);
     
     self.HUDFrame = CGRectZero;
     
-    CGFloat textY = FJVerticalSpace;
+    CGFloat textY = FJVerticalSpace*2;
     CGFloat textX = 0;
     CGFloat textW = contentW;
     CGFloat textH = textSize.height;
@@ -99,7 +105,7 @@
         contentW = width+FJVerticalSpace*2;
         contentH = height+FJVerticalSpace*2;
     }else{
-        contentW = textSize.width > width ? textSize.width : width;
+        contentW = textSize.width >  width+FJVerticalSpace*2? textSize.width : width+FJVerticalSpace*2;
         contentH = textSize.height+height+FJVerticalSpace*3;
     }
     CGFloat contentX = (FJMainScreenWidth - contentW)/2;
@@ -107,14 +113,14 @@
     self.contentViewFrame = CGRectMake(contentX, contentY, contentW, contentH);
     
     CGFloat customY = FJVerticalSpace;
-    CGFloat customX = (contentW - FJHUDWH)/2;
+    CGFloat customX = (contentW - width )/2;
     CGFloat customW = width;
     CGFloat customH = height;
     self.imageViewFrame = CGRectMake(customX, customY, customW, customH);
     
     self.HUDFrame = CGRectZero;
-
-    CGFloat textY = FJHUDWH+FJVerticalSpace*2;
+    
+    CGFloat textY = CGRectGetMaxY(self.imageViewFrame)+FJVerticalSpace;
     CGFloat textX = 0;
     CGFloat textW = contentW;
     CGFloat textH = textSize.height;
@@ -190,7 +196,7 @@
     [HUDLayer addSublayer:layer];
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation.duration = 0.5;
+    animation.duration = 0.3;
     animation.fromValue = @0;
     animation.toValue = @1;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
@@ -235,14 +241,14 @@
     [HUDLayer addSublayer:Layer2];
     
     CABasicAnimation *animation1 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation1.duration = 0.2;
+    animation1.duration = 0.3;
     animation1.fromValue = @0;
     animation1.toValue = @1;
     animation1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     [Layer1 addAnimation:animation1 forKey:@"strokeEnd"];
     
     CABasicAnimation *animation2 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    animation2.duration = 0.2;
+    animation2.duration = 0.3;
     animation2.fromValue = @0;
     animation2.toValue = @1;
     animation2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
@@ -288,3 +294,4 @@
 }
 
 @end
+

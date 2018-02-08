@@ -15,20 +15,21 @@
 
 #define FJFont(__size__) [UIFont systemFontOfSize:__size__]
 #define FJGlobalTextFont FJFont(16)
-
+//水平间隙
 #define FJHorizontalSpace 20
+//垂直间隙
 #define FJVerticalSpace 10
-
+//默认HUDView宽（不限高）
 #define FJContentNormalWidth 180
-
+//最大HUDView宽（不限高）
 #define FJContentMaxWidth FJMainScreenWidth-FJHorizontalSpace*2
-
+//HUD宽高
 #define FJHUDWH 60
-
+//动画时间
 #define FJAnimationTime 0.3
-
+//动态图展示时间
 #define FJimageAnimationTime 3
-
+//圆环宽度
 #define FJStrokeWidth 3
 
 // 颜色
@@ -40,3 +41,4 @@
 
 
 #endif /* FJProgressHUDConfig_h */
+

@@ -13,10 +13,15 @@
 @interface FJProgressHUD()
 
 @property (nonatomic,strong) UIImageView *imageView;
+
 @property (nonatomic,strong) UIView *contentView;
+
 @property (nonatomic,strong) UILabel *textLabel;
+
 @property (nonatomic,strong) UIActivityIndicatorView *indicatorView;
+
 @property (nonatomic,strong) FJProgressHUDInfo *HUDInfo;
+
 @property (nonatomic,strong) CAShapeLayer *HUDlayer;
 
 @end
@@ -24,10 +29,10 @@
 @implementation FJProgressHUD
 
 
-#pragma mark - show
+#pragma mark - show(类方法)
 //加载(指示器)
 + (FJProgressHUD *)showLoadingIndicatorText:(NSString *)text toView:(UIView *)view{
-   FJProgressHUD *hud = [self progressHUD];
+    FJProgressHUD *hud = [self progressHUD];
     hud.text = text;
     hud.showType = FJProgressHUDLoadingIndicator;
     hud.maskType = FJProgressHUDMaskTypeClear;
@@ -60,27 +65,41 @@
     hud.maskType = FJProgressHUDMaskTypeClear;
     hud.dissmissTime = 1.5;
     [hud showToView:view];
-   
+    
 }
 //状态(失败)
 + (void)showFailText:(NSString *)text toView:(UIView *)view{
     FJProgressHUD *hud = [self progressHUD];
     hud.text = text;
-    hud.showType = FJProgressHUDStatusSuccess;
+    hud.showType = FJProgressHUDStatusFail;
     hud.maskType = FJProgressHUDMaskTypeClear;
     hud.dissmissTime = 1.5;
     [hud showToView:view];
     
 }
 //自定义图片
-+ (FJProgressHUD *)showCustomText:(NSString *)text images:(NSArray *)iamges width:(CGFloat)width height:(CGFloat)height toView:(UIView *)view{
++ (FJProgressHUD *)showCustomText:(NSString *)text images:(NSArray *)images toView:(UIView *)view{
     FJProgressHUD *hud = [self progressHUD];
     hud.text = text;
-    hud.modeType = FJProgressHUDModeCustom;
+    hud.images = images;
+    hud.showType = FJProgressHUDCustom;
     hud.maskType = FJProgressHUDMaskTypeClear;
     [hud showToView:view];
     return hud;
 }
+
++ (FJProgressHUD *)showCustomText:(NSString *)text images:(NSArray *)images width:(CGFloat)width height:(CGFloat)height toView:(UIView *)view{
+    FJProgressHUD *hud = [self progressHUD];
+    hud.text = text;
+    hud.width = width;
+    hud.height = height;
+    hud.images = images;
+    hud.showType = FJProgressHUDCustom;
+    hud.maskType = FJProgressHUDMaskTypeClear;
+    [hud showToView:view];
+    return hud;
+}
+
 //只有文本
 +(void)showOnlyText:(NSString *)text toView:(UIView *)view{
     FJProgressHUD *hud = [self progressHUD];
@@ -88,6 +107,16 @@
     hud.modeType = FJProgressHUDModeOnlyText;
     hud.dissmissTime = 1.5;
     [hud showToView:view];
+}
+
+//不显示文本
++(FJProgressHUD *)showOnlyHUDOrCustom:(FJProgressHUDShowType)showType images:(NSArray *)images toView:(UIView *)view{
+    FJProgressHUD *hud = [self progressHUD];
+    hud.images = images;
+    hud.showType = showType;
+    hud.maskType = FJProgressHUDMaskTypeClear;
+    [hud showToView:view];
+    return hud;
 }
 
 #pragma mark - init
@@ -132,9 +161,26 @@
 - (void)setText:(NSString *)text{
     _text = text;
     //指定默认模式 (hudinfo会判断文字是否为空)
-    self.modeType = FJProgressHUDModeHud;
+    self.modeType = FJProgressHUDModeHudOrCustom;
 }
 
+- (void)setImages:(NSArray *)images{
+    _images = images;
+    //指定默认模式
+    self.modeType = FJProgressHUDModeHudOrCustom;
+}
+
+- (void)setWidth:(CGFloat)width{
+    _width = width;
+    //指定默认模式
+    self.modeType = FJProgressHUDModeHudOrCustom;
+}
+
+- (void)setHeight:(CGFloat)height{
+    _height = height;
+    //指定默认模式
+    self.modeType = FJProgressHUDModeHudOrCustom;
+}
 
 - (void)setMaskType:(FJProgressHUDMaskType )maskType{
     _maskType = maskType;
@@ -154,20 +200,28 @@
 - (void)setModeType:(FJProgressHUDModeType )modeType{
     _modeType = modeType;
     switch (modeType) {
-        case FJProgressHUDModeHud:
-            [self.HUDInfo layoutHUDWithText:_text];
+        case FJProgressHUDModeHudOrCustom:
+            if (self.images.count>0) {
+                if (!_width&&!_height) {
+                    [self.HUDInfo layoutCustomWithText:_text];
+                }else{
+                    [self.HUDInfo layoutCustomWithText:_text Width:_width height:_height];
+                }
+            }else{
+                [self.HUDInfo layoutHUDWithText:_text];
+            }
             [self layoutFrame];
             break;
-        case FJProgressHUDModeOnlyHud:
-            [self.HUDInfo layoutOnlyHUD];
+        case FJProgressHUDModeOnlyHudOrCustom:
+            if (self.images.count>0) {
+                [self.HUDInfo layoutOnlyCustom];
+            }else{
+                [self.HUDInfo layoutOnlyHUD];
+            }
             [self layoutFrame];
             break;
         case FJProgressHUDModeOnlyText:
             [self.HUDInfo layoutOnlyTextWithText:_text];
-            [self layoutFrame];
-            break;
-        case FJProgressHUDModeCustom:
-            [self.HUDInfo layoutCustomWithText:_text];
             [self layoutFrame];
             break;
     }
@@ -203,6 +257,9 @@
         case FJProgressHUDStatusFail:
             [self.HUDInfo drawStatusFail:self.HUDlayer];
             break;//状态(失败)
+        case FJProgressHUDCustom:
+            [self imageViewSetImages:_images];
+            break;//自定义
     }
 }
 
@@ -223,10 +280,7 @@
     self.indicatorView.color = color;
 }
 
-- (void)setImages:(NSArray *)images{
-    _images = images;
-    [self imageViewSetImages:_images];
-}
+
 
 - (void)setProgress:(CGFloat)progress{
     _progress = progress;
@@ -235,11 +289,12 @@
     }
 }
 
-- (void)setCustomText:(NSString *)text images:(NSArray *)iamges width:(CGFloat)width height:(CGFloat)height{
-    [self.HUDInfo layoutCustomWithText:text Width:width height:height];
-    [self layoutFrame];
-    _images = iamges;
-    [self imageViewSetImages:iamges];
+- (void)setCustomText:(NSString *)text images:(NSArray *)images width:(CGFloat)width height:(CGFloat)height{
+    self.text = text;
+    self.width = width;
+    self.height = height;
+    self.images = images;
+    self.showType = FJProgressHUDCustom;
 }
 
 - (void)imageViewSetImages:(NSArray *)images{
@@ -258,12 +313,14 @@
     }
 }
 
+#pragma mark - show（实例方法）
+
 - (void)showToView:(UIView *)view{
     if (!view||self.maskType == FJProgressHUDMaskTypeClear||self.maskType == FJProgressHUDMaskTypeGray){
         UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
         [window addSubview:self];
     }else{
-    [view addSubview:self];
+        [view addSubview:self];
     }
     if (self.animationType == FJProgressHUDAnimationNormal) {
         [self showNormalAnimation];
@@ -274,8 +331,9 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.dissmissTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self dismiss];
     });
-
+    
 }
+#pragma mark - showAnimation
 
 - (void)showNormalAnimation{
     self.contentView.transform = CGAffineTransformMakeScale(0.7, 0.7);
@@ -300,9 +358,9 @@
         self.contentView.alpha = 0;
         self.alpha = 0;
     }completion:^(BOOL finished) {
-         [self removeFromSuperview];
+        [self removeFromSuperview];
     }];
-   
+    
 }
 #pragma mark - 懒加载
 
@@ -365,3 +423,4 @@
 
 
 @end
+
